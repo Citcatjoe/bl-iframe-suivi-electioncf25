@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Import fonts */
+@font-face {
+  font-family: "blickextrabold";
+  src: url("./assets/fonts/code-next_extrabold-webfont.woff2") format("woff2"), url("./assets/fonts/code-next_extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "blickregular";
+  src: url("./assets/fonts/code-next_regular-webfont.woff2") format("woff2"), url("./assets/fonts/code-next_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-blickr {
+  font-family: "blickregular";
+}
+
+.font-blickb {
+  font-family: "blickextrabold";
+}
+
+.font-i {
+  font-family: Inter;
+}
+
+/* Import custom SCSS */
+#app,
+#calendar {
+  max-width: 632px;
+  border-top: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+}
+@media (max-width: 400px) {
+  #app,
+#calendar {
+    padding: 10px;
+    max-width: 100%;
+  }
+}
+#app .event-date,
+#calendar .event-date {
+  border: 1px solid #c9c9c9;
+  line-height: 0;
+}
+#app .event-date .event-date-day,
+#calendar .event-date .event-date-day {
+  line-height: 1;
+  top: 3px;
+}
+#app .event-date .event-date-month,
+#calendar .event-date .event-date-month {
+  line-height: 1;
+  bottom: 3px;
+}
+#app ul,
+#calendar ul {
+  background: #f7f7f7;
+}
+#app ul li:not(:last-child),
+#calendar ul li:not(:last-child) {
+  border-bottom: 1px solid #dedede;
+}
+
+.border-blick {
+  border-color: rgb(226, 0, 0);
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*# sourceMappingURL=style.css.map */
