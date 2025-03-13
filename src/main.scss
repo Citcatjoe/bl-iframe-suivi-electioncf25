@@ -11,68 +11,104 @@ $gray-hr-light: #dedede;
 
 
 // Breakpoints
+$medium: 800px;
 $mobile: 400px;
 
 
 
 
 #app {
-  max-width: 632px;
+  max-width: 964px;
+  width: 100%;
   height: 305px;
   //padding: 20px 20px 40px 20px;
   //background: $gray;
   // border-top: 1px solid $gray-hr;
   // border-bottom: 1px solid $gray-hr;
 
+  background: url(img/bg-xlarge2.png) no-repeat center top;
+  background-size: cover;
+
+  @media (max-width: $medium) {
+    max-width: 632px;
+    width: 100%;
+
+ 
+
+    background: url(img/bg-large.png) no-repeat center top;
+    background-size: cover;
+  }
+
   @media (max-width: $mobile) {
     // padding: 10px;
     // max-width: 100%;
+
     width: 100%;
     height: auto;
     aspect-ratio: 6/5;
+
+    background: url(img/bg-mobile.png) no-repeat center top;
+    background-size: cover;
   }
  
 
 }
 
 .btns {
-  font-size: 12px;
+  width: 320px;
+  font-size: 14px;
+  line-height: 1.2;
 
-  @media (min-width: $mobile) {
-    font-size: 14px;
+  @media (max-width: $medium) {
+    width: initial; 
   }
 
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  
+  
 
-
-  a:first-child button {
-    width: 100%;
+  // Add margin-bottom to all buttons
+  a button
+  {
     margin-bottom: 10px;
 
-    @media (min-width: $mobile) {
-      width: calc(33% - 8px);
-      margin-right: 8px;
-      float:left;
+    @media (max-width: $medium) {
+      float: left;
+      width: calc(33% - 10px);
+      margin-right: 10px;
+    }
+    @media (max-width: $mobile) {
+      width: calc(50% - 5px);
+    }
+
+    
+  }
+
+  a:nth-child(2) button
+  {
+    @media (max-width: $mobile) {
+      margin-right: 0;
     }
   }
 
-  a button {
-    width: calc(50% - 5px);
-    margin-right: 10px;
-    float: left;
-
-    @media (min-width: $mobile) {
-      width: calc(33% - 8px);
-      margin-right: 8px;
+  // Remove margin-bottom from last button
+  a:last-child button
+  {
+    margin-bottom: 0;
+    @media (max-width: $medium) {
+      margin-right: 0;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
     }
   }
+  
 
-  a:last-child button {
-    margin-right: 0;
-
-    @media (min-width: $mobile) {
-      width: calc(33% - 8px);
-    }
-  }
+  
   
 }
 
